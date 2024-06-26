@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 40px;
+    background-image: linear-gradient(to right,#be9b7b,  #3c2f2f);
+    opacity: 0.8;
+}
+
+.navbar img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.linksContainer{
+    margin: 10px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.linksContainer div a {
+    color: whitesmoke; 
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none; 
+}
+
+.linksContainer div a.active {
+    color: rgb(133, 247, 255); 
+}
+
+.linksContainer button{
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none; 
+}

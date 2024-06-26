@@ -1,0 +1,58 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  row-gap: 10px;
+  border: 1px solid #ddd;
+  width: 90% ;
+  height: 40vh;
+  border-radius: 5px;
+  word-break: break-word;
+  padding: 16px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  opacity: 0.9;
+
+ 
+}
+
+.card:hover{
+  transform: scale(1.02);
+}
+  
+.card h2 {
+  margin-top: 0;
+}
+
+.description {
+  margin: 8px 0;
+  overflow-y: hidden;
+  max-height: 150px;
+  
+}
+
+p{
+  margin: 0;
+  color: rgb(65, 62, 62);
+}
+.btnContainer{
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.btnContainer button{
+  height: 30px;
+  cursor: pointer;
+  background-color: #5f5e97;
+  border-radius: 0.2rem;
+  color: whitesmoke;
+  border: none;
+  
+}
+
+.btnContainer button:hover{
+  background-color: #706fa8;
+}

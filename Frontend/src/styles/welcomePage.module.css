@@ -1,0 +1,16 @@
+.welcomeMessageContainer{
+    display: flex ;
+    flex-direction: column;
+    row-gap: 20px;
+    position: relative;
+}
+
+.welcomeMessageContainer p{
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 800;
+    z-index: 2;
+    top: 30%;
+    left: 50%;
+    color: rgb(89, 132, 170);
+}
