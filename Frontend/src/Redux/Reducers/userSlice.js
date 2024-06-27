@@ -19,7 +19,7 @@ export const fetchUserStatus = createAsyncThunk('user/fetchUserStatus', async ()
   };
 
   try {
-    const response = await axios.get('http://localhost:3100/user/status', config);
+    const response = await axios.get('https://movie-watch-list-server.vercel.app/user/status', config);
     return response.data;
   } catch (error) {
     console.error('Error fetching user status:', error);
@@ -28,12 +28,12 @@ export const fetchUserStatus = createAsyncThunk('user/fetchUserStatus', async ()
 });
 
 export const signUp = createAsyncThunk('user/signUp', async (formData) => {
-  const response = await axios.post('http://localhost:3100/user/signup', formData);
+  const response = await axios.post('https://movie-watch-list-server.vercel.app/user/signup', formData);
   return response.data;
 });
 
 export const signIn = createAsyncThunk('user/signIn', async (formData) => {
-  const response = await axios.post('http://localhost:3100/user/signin', formData);
+  const response = await axios.post('https://movie-watch-list-server.vercel.app/user/signin', formData);
  
   return response.data;
 });
