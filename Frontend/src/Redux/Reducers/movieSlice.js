@@ -13,14 +13,14 @@ const config = {
 // Get movies from DB
 export const getMovies = createAsyncThunk('movies/getMovies', async (_, { getState }) => {
    
-    const response = await axios.get('https://movie-watch-list-server.vercel.app/movies/get', config);
+    const response = await axios.get('https://moviewatchlist-server.onrender.com/movies/get', config);
     return response.data.movies;
   });
   
 //   Add a new movie to the watchList
   export const addMovie = createAsyncThunk('movies/add', async (movieData) => {
 
-    const response = await axios.post('https://movie-watch-list-server.vercel.app/movies/add', movieData, config); 
+    const response = await axios.post('https://moviewatchlist-server.onrender.com/movies/add', movieData, config); 
     
     return response.data;
   });
@@ -29,14 +29,14 @@ export const getMovies = createAsyncThunk('movies/getMovies', async (_, { getSta
 
 export const deleteMovie = createAsyncThunk('/movies/delete', async(movieId)=>{
 
-    const response = await axios.delete(`https://movie-watch-list-server.vercel.app/movies/delete/${movieId}`, config);
+    const response = await axios.delete(`https://moviewatchlist-server.onrender.com/movies/delete/${movieId}`, config);
     return movieId;
 })
 
 // Updating a movie in list
 export const updateMovie = createAsyncThunk('movies/update', async ({ _id, title, description, year, genre }) => {
     try {
-      const response = await axios.put(`https://movie-watch-list-server.vercel.app/movies/update/${_id}`, { title, description, year, genre }, config);
+      const response = await axios.put(`https://moviewatchlist-server.onrender.com/movies/update/${_id}`, { title, description, year, genre }, config);
       return response.data; // Assuming your API returns the updated movie object
     } 
     catch (error) {
