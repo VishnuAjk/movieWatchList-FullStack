@@ -17,6 +17,12 @@ app.use(cors({
 
 app.use(express.json());
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://movie-watch-list-client.vercel.app");
+    res.header("Access-Control-Allow-Methods", "GET, POST, DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();
+});
 
 app.use('/user', userRouter);
 app.use('/movies',jwtAuth ,movieRouter);
