@@ -8,9 +8,12 @@ import movieRouter from "./src/Routes/movie.routes.js";
 import { connectToDatabase } from "./src/Config/mongoose.js";
 import jwtAuth from "./src/Middlewares/jwtAuth.middleware.js";
 const app = express();
-
+const corsOptions = {
+    origin: 'https://movie-watch-list-client.vercel.app', 
+    optionsSuccessStatus: 200
+};
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use('/user', userRouter);
 app.use('/movies',jwtAuth ,movieRouter);
